@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Северночка</title>
+</head>
+<body class="bg-gray-50">
+
+  <header class="w-full bg-white shadow-sm border-b border-gray-200 py-3 fixed top-0 left-0 z-50">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 gap-4">
+
+      <div class="flex items-center gap-3">
+        <a class="flex items-center gap-[20px]" href="./index.html">
+        <img src="./images/logo.png" alt="logo" class="w-[40px] h-[40px]" />
+        <p class="font-semibold text-[18px]">СЕВЕРНОЧКА</p>
+        </a>
+      </div>
+
+      <button class="hidden md:flex items-center gap-2 bg-lime-500 w-[200px] hover:bg-lime-600 text-white rounded-md px-4 py-2 border border-lime-500">
+        <img src="./images/menu.png" alt="menu" class="w-[18px] h-[18px]" />
+        <span>Каталог</span>
+      </button>
+
+      <div class="flex items-center w-[400px] border border-lime-500 rounded-md overflow-hidden">
+        <input 
+          type="text" 
+          placeholder="Найти товар" 
+          class="flex-1 px-3 py-2 w-[400px] outline-none text-[14px]"
+        />
+        <button class="px-3">
+          <img src="./images/search.png" alt="search" class="w-[18px] h-[18px] opacity-70" />
+        </button>
+      </div>
+
+      <ul class="hidden md:flex items-center gap-6">
+        <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+          <img src="./images/like.png" alt="like" class="w-[22px] h-[22px] mb-1" />
+          <p class="text-[13px]">Избранное</p>
+        </li>
+        <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+          <img src="./images/product.png" alt="product" class="w-[22px] h-[22px] mb-1" />
+          <p class="text-[13px]">Продукты</p>
+        </li>
+        <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+          <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" />
+          <p class="text-[13px]">Корзина</p>
+        </li>
+        <li class="flex items-center gap-2 cursor-pointer">
+          <img src="./images/avatar.png" alt="user" class="w-[32px] h-[32px] rounded-full" />
+          <p class="font-medium text-[14px]">Алексей</p>
+          <img src="./images/Button.png" alt="arrow"/>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="md:hidden fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50 p-3 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <img src="./images/logo.png" alt="logo" class="w-[35px] h-[35px]" />
+      <p class="font-semibold text-[16px]">СЕВЕРНОЧКА</p>
+    </div>
+
+    <div class="flex items-center border border-lime-500 rounded-md overflow-hidden flex-1 ml-3">
+      <input 
+        type="text" 
+        placeholder="Найти товар" 
+        class="flex-1 px-2 py-2 outline-none text-[14px]"
+      />
+      <button class="px-3">
+        <img src="./images/search.png" alt="search" class="w-[18px] h-[18px] opacity-70" />
+      </button>
+    </div>
+  </div>
+
+  <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-sm py-2 z-50">
+    <ul class="flex justify-around">
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/telefon-kat.png" alt="catalog" class="w-[22px] h-[22px] mb-1" />
+        <p class="text-[12px]">Каталог</p>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/like.png" alt="like" class="w-[22px] h-[22px] mb-1" />
+        <p class="text-[12px]">Избранное</p>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/product.png" alt="product" class="w-[22px] h-[22px] mb-1" />
+        <p class="text-[12px]">Продукты</p>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" />
+        <p class="text-[12px]">Корзина</p>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/avatar.png" alt="user" class="w-[25px] h-[25px] rounded-full mb-1" />
+        <p class="text-[12px]">Профиль</p>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="pt-[100px] md:pt-[80px] pb-[80px] md:pb-0">
+  </main>
+
+  <div class="w-full h-[300px] bg-cover bg-center flex items-center justify-center text-center px-4 pt-[80px] md:pt-[40px]"
+     style="background-image: url('./images/Group 7100.png');">
+  <div class="flex items-center justify-center gap-4 flex-wrap md:flex-nowrap">
+    <img src="./images/img.png" alt="icon" class="hidden md:block">
+    <p class="text-[23px] md:text-[56px] font-bold text-black">
+      Доставка бесплатно от 1000 ₽
+    </p>
+  </div>
+  </div>
+
+<div class="w-full bg-orange-50">
+  <div class="max-w-[1440px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+    <p class="text-3xl sm:text-4xl font-bold">Акции</p>
+    <div class="flex items-center justify-center gap-4 sm:gap-5">
+      <p class="text-lg sm:text-[20px] font-semibold">Все продукты</p>
+      <img src="./images/chevron-right.png" alt="">
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] pb-16 pb-[120px] px-4 sm:px-6 md:px-12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/bilinchik.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg sm:text-[22px] font-bold">44,50 ₽</p>
+        <p class="text-lg sm:text-[22px]">50,50 ₽</p>
+      </div>
+      <div class="flex justify-between text-sm sm:text-[14px]">
+        <p class="text-gray-500">С картой</p>
+        <p>Обычная</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Г/Ц Блинчики с мясом вес,<br>Россия</p>
+        <img src="./images/yulduz2.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/sut.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg sm:text-[22px] font-bold">44,50 ₽</p>
+        <p class="text-lg sm:text-[22px]">50,50 ₽</p>
+      </div>
+      <div class="flex justify-between text-sm sm:text-[14px]">
+        <p class="text-gray-500">С картой</p>
+        <p>Обычная</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Молоко ПРОСТОКВАШИНО паст.<br>питьевое цельное отборное...</p>
+        <img src="./images/yulduz3.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+        <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/kolbasa.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg sm:text-[22px] font-bold">44,50 ₽</p>
+        <p class="text-lg sm:text-[22px]">50,50 ₽</p>
+      </div>
+      <div class="flex justify-between text-sm sm:text-[14px]">
+        <p class="text-gray-500">С картой</p>
+        <p>Обычная</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Колбаса сырокопченая МЯСНАЯ<br>ИСТОРИЯ Сальчичон и Тоскан...</p>
+        <img src="./images/yulduz5.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+        <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/sosiska.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg sm:text-[22px] font-bold">44,50 ₽</p>
+        <p class="text-lg sm:text-[22px]">50,50 ₽</p>
+      </div>
+      <div class="flex justify-between text-sm sm:text-[14px]">
+        <p class="text-gray-500">С картой</p>
+        <p>Обычная</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Сосиски вареные МЯСНАЯ<br>ИСТОРИЯ Молочные и С сыро...</p>
+        <img src="./images/yulduz4.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="max-w-[1440px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+    <p class="text-3xl sm:text-4xl font-bold">Новинки</p>
+    <div class="flex items-center justify-center gap-4 sm:gap-5">
+      <p class="text-lg sm:text-[20px] font-semibold">Все продукты</p>
+      <img src="./images/chevron-right.png" alt="">
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] pb-16 pb-[120px] px-4 sm:px-6 md:px-12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/kapchonniy.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">599,99 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Комбайн КЗС-1218<br>«ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+        <img src="./images/yulduz2.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/kolbasa.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">44,50 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Колбаса сырокопченая МЯСНАЯ<br>ИСТОРИЯ Сальчичон и Тоскан...</p>
+        <img src="./images/yulduz5.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/sosiska.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">159,99 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Комбайн КЗС-1218<br>«ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+        <img src="./images/yulduz5.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/sut.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">49,39 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Комбайн КЗС-1218<br>«ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+        <img src="./images/yulduz4.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="max-w-[1440px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+    <p class="text-3xl sm:text-4xl font-bold">Покупали раньше</p>
+    <div class="flex items-center justify-center gap-4 sm:gap-5">
+      <p class="text-lg sm:text-[20px] font-semibold">Все продукты</p>
+      <img src="./images/chevron-right.png" alt="">
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] pb-16 pb-[120px] px-4 sm:px-6 md:px-12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/tovuqli.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">77,99 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Комбайн КЗС-1218<br>«ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+        <img src="./images/yulduz2.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/sosiska.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">159,99 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Колбаса сырокопченая МЯСНАЯ<br>ИСТОРИЯ Сальчичон и Тоскан...</p>
+        <img src="./images/yulduz5.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/kapchonniy.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">599,99 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Комбайн КЗС-1218<br>«ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+        <img src="./images/yulduz5.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+      <img class="py-2 sm:py-3" src="./images/sut.png" alt="">
+      <div class="flex justify-between py-1 sm:py-2">
+        <p class="text-lg mb-[10px] sm:text-[22px] font-bold">49,39 ₽</p>
+      </div>
+      <div class="py-2 sm:py-3 flex flex-col items-center">
+        <p class="text-base sm:text-[18px] pb-2 sm:pb-2">Комбайн КЗС-1218<br>«ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+        <img src="./images/yulduz4.png" alt="">
+        <button class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
+          В корзину
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="max-w-[1440px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+    <p class="text-3xl sm:text-4xl font-bold">Специальные предложения</p>
+  </div>
+
+
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 pb-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
+  
+  <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-[22px] bg-orange-200 px-5 py-5 rounded-lg">
+    <div class="flex-1">
+      <p class="text-xl sm:text-[24px] font-bold">
+        Оформите карту<br>«Северяночка»
+      </p>
+      <p class="mt-2 text-base sm:text-[16px]">
+        И получайте бонусы при покупке<br>в магазинах и на сайте
+      </p>
+    </div>
+    <div class="flex-shrink-0">
+      <img class="w-[207px] h-[138px] object-contain" src="./images/severyanochka.png" alt="">
+    </div>
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-[22px] bg-lime-200 px-5 py-5 rounded-lg">
+    <div class="flex-1">
+      <p class="text-xl sm:text-[24px] font-bold">
+        Покупайте<br>акционные товары
+      </p>
+      <p class="mt-2 text-base sm:text-[16px]">
+        И получайте вдвое больше<br>бонусов
+      </p>
+    </div>
+    <div class="flex-shrink-0">
+      <img class="w-[207px] h-[138px] object-contain" src="./images/korzina.png" alt="">
+    </div>
+  </div>
+
+  </div>
+
+  <div class="max-w-[1440px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+    <p class="text-3xl sm:text-4xl font-bold">Наши магазины</p>
+  </div>  
+
+  <div class="max-w-[1440px] pb-[10 0px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-wrap justify-start items-center gap-3 sm:gap-4">
+  
+  <p class="text-sm sm:text-[18px] border border-gray-950 py-2 px-4 sm:px-5 rounded-full hover:border-none hover:bg-lime-500 duration-500 hover:text-white cursor-pointer">
+    п.Щельяюр
+  </p>
+  
+  <p class="text-sm sm:text-[18px] border border-gray-950 py-2 px-4 sm:px-5 rounded-full hover:border-none hover:bg-lime-500 duration-500 hover:text-white cursor-pointer">
+    д.Вертеп
+  </p>
+  
+  <p class="text-sm sm:text-[18px] border border-gray-950 py-2 px-4 sm:px-5 rounded-full hover:border-none hover:bg-lime-500 duration-500 hover:text-white cursor-pointer">
+    с.Краснобор
+  </p>
+  
+  <p class="text-sm sm:text-[18px] border border-gray-950 py-2 px-4 sm:px-5 rounded-full hover:border-none hover:bg-lime-500 duration-500 hover:text-white cursor-pointer">
+    д.Диюр
+  </p>
+  </div>
+
+  <div class="pb-[100px] container mx-auto max-w-[1440px] pb-24 px-4 sm:px-6 md:px-12">
+    <img class="w-full h-auto" src="./images/karta.png" alt="Карта">
+  </div>
+
+  <div class="max-w-[1440px] py-10 px-4 sm:px-6 md:px-12 mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
+    <p class="text-3xl sm:text-4xl font-bold">Статьи</p>
+    <div class="flex items-center justify-center gap-4 sm:gap-5">
+      <p class="text-lg sm:text-[20px] font-semibold">Все продукты</p>
+      <img src="./images/chevron-right.png" alt="">
+    </div>
+  </div>
+
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 pb-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <div class="bg-white rounded-lg shadow-md flex flex-col">
+    <img class="w-full rounded-t-lg" src="./images/covid.png" alt="">
+    <div class="px-3 pb-6 pt-4 flex flex-col">
+      <p class="pb-2 text-sm sm:text-base text-gray-500">05.03.2021</p>
+      <p class="pb-2 text-[18px] font-bold">Режим использования масок и<br>перчаток на территории магазинов</p>
+      <p class="pb-2 text-[16px] text-gray-700">
+        Подробная информация о режимах <br>
+        использования масок и перчаток на <br>
+        территории магазинов "ЛЕНТА". Информация <br>
+        обновляется каждый будний день.
+      </p>
+      <a class="mt-2 py-2 px-6 bg-lime-100 hover:bg-lime-500 hover:text-white rounded-[4px] transition-colors duration-500 w-max text-center" href="">Подробнее</a>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-md flex flex-col">
+    <img class="w-full rounded-t-lg" src="./images/ramashka.png" alt="">
+    <div class="px-3 pb-6 pt-4 flex flex-col">
+      <p class="pb-2 text-sm sm:text-base text-gray-500">05.03.2021</p>
+      <p class="pb-2 text-[18px] font-bold">Весеннее настроение для каждой</p>
+      <p class="pb-2 text-[16px] pb-[26px] text-gray-700">
+        8 Марта – это не просто Международный<br>
+        женский день, это ещё день тюльпанов,<br>
+        приятных сюрпризов и праздничных тёплых<br>
+        пожеланий.
+      </p>
+      <a class="mt-2 py-2 px-6 bg-lime-100 hover:bg-lime-500 hover:text-white rounded-[4px] transition-colors duration-500 w-max text-center" href="">Подробнее</a>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-md flex flex-col">
+    <img class="w-full rounded-t-lg" src="./images/vegetablas.png" alt="">
+    <div class="px-3 pb-6 pt-4 flex flex-col">
+      <p class="pb-2 text-sm sm:text-base text-gray-500">22.02.2020</p>
+      <p class="pb-2 text-[18px] font-bold">ЗОЖ или ФАСТФУД. А вы на чьей<br>стороне? Голосуем!</p>
+      <p class="pb-2 text-[16px] text-gray-700">
+        Голосуйте за любимые категории, выбирайте<br>
+        категорию-победителя в мобильном<br>
+        приложении и получайте кешбэк 10%<br>
+        баллами в апреле!
+      </p>
+      <a class="mt-2 py-2 px-6 bg-lime-100 hover:bg-lime-500 hover:text-white rounded-[4px] transition-colors duration-500 w-max text-center" href="">Подробнее</a>
+    </div>
+  </div>
+  </div>
+
+  <footer class="w-full bg-[url('./images/footer.png')] bg-cover bg-center bg-no-repeat py-8 sm:py-12">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0">
+
+    <div class="flex items-center gap-2">
+      <a class="flex items-center gap-4" href="">
+      <img class="w-10 h-10" src="./images/logo.png" alt="logo">
+      <span class="text-lg font-bold text-gray-800">Северяночка</span>
+      </a>
+    </div>
+
+    <div class="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 text-gray-700 text-sm sm:text-base">
+      <a href="" class="hover:text-lime-500 transition-colors">О компании</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Контакты</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Вакансии</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Статьи</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Политика обработки персональных данных</a>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+      <div class="flex gap-3">
+        <a href=""><img class="w-5 h-5" src="./images/instagram.png" alt="Instagram"></a>
+        <a href=""><img class="w-5 h-5" src="./images/vkontakte.png" alt="VK"></a>
+        <a href=""><img class="w-5 h-5" src="./images/facebook.png" alt="Facebook"></a>
+      </div>
+      <div class="text-gray-800 flex items-center gap-[10px] font-semibold">
+        <img src="./images/phone.png" alt="">
+        <p>8 800 777 33 33</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="container flex items-center justify-center sm:justify-end gap-[20px] pr-[100px] pb-[50px] mx-auto">
+    <p class="justify-center">Дизайн</p>
+    <a class="justify-center" href="">
+      <img class="w-[150px]" src="./images/Union.png" alt="">
+    </a>
+ </div>
+
+</footer>
+
+
+</body>
+</html>
