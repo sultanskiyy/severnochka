@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Северночка</title>
+</head>
+<body class="bg-gray-50">
+
+  <header class="w-full bg-white shadow-sm border-b border-gray-200 py-3 fixed top-0 left-0 z-50">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 gap-4">
+
+      <div class="flex items-center gap-3">
+        <a class="flex items-center gap-[20px]" href="./index.html">
+        <img src="./images/logo.png" alt="logo" class="w-[40px] h-[40px]" />
+        <p class="font-semibold text-[18px]">СЕВЕРНОЧКА</p>
+        </a>
+      </div>
+
+      <button class="hidden md:flex items-center gap-2 bg-lime-500 w-[200px] hover:bg-lime-600 text-white rounded-md px-4 py-2 border border-lime-500">
+        <img src="./images/menu.png" alt="menu" class="w-[18px] h-[18px]" />
+        <span>Каталог</span>
+      </button>
+
+      <div class="flex items-center w-[400px] border border-lime-500 rounded-md overflow-hidden">
+        <input 
+          type="text" 
+          placeholder="Найти товар" 
+          class="flex-1 px-3 py-2 w-[400px] outline-none text-[14px]"
+        />
+        <button class="px-3">
+          <img src="./images/search.png" alt="search" class="w-[18px] h-[18px] opacity-70" />
+        </button>
+      </div>
+
+      <ul class="hidden md:flex items-center gap-6">
+        <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+          <img src="./images/like.png" alt="like" class="w-[22px] h-[22px] mb-1" />
+          <a href=""><p class="text-[13px]">Избранное</p></a>
+        </li>
+        <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+          <img src="./images/product.png" alt="product" class="w-[22px] h-[22px] mb-1" />
+          <a href=""><p class="text-[13px]">Продукты</p></a>
+        </li>
+        <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+          <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" />
+          <a href="./korzina.html"><p class="text-[13px]">Корзина</p></a>
+        </li>
+        <li class="flex items-center gap-2 cursor-pointer">
+          <img src="./images/avatar.png" alt="user" class="w-[32px] h-[32px] rounded-full" />
+          <a href=""><p class="font-medium text-[14px]">Алексей</p></a>
+          <img src="./images/Button.png" alt="arrow"/>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="md:hidden fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50 p-3 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <img src="./images/logo.png" alt="logo" class="w-[35px] h-[35px]" />
+      <p class="font-semibold text-[16px]">СЕВЕРНОЧКА</p>
+    </div>
+
+    <div class="flex items-center border border-lime-500 rounded-md overflow-hidden flex-1 ml-3">
+      <input 
+        type="text" 
+        placeholder="Найти товар" 
+        class="flex-1 px-2 py-2 outline-none text-[14px]"
+      />
+      <button class="px-3">
+        <img src="./images/search.png" alt="search" class="w-[18px] h-[18px] opacity-70" />
+      </button>
+    </div>
+  </div>
+
+  <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-sm py-2 z-50">
+    <ul class="flex justify-around">
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/telefon-kat.png" alt="catalog" class="w-[22px] h-[22px] mb-1" />
+        <a href=""><p class="text-[12px]">Каталог</p></a>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/like.png" alt="like" class="w-[22px] h-[22px] mb-1" />
+        <a href=""><p class="text-[12px]">Избранное</p></a>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/product.png" alt="product" class="w-[22px] h-[22px] mb-1" />
+        <a href=""><p class="text-[12px]">Продукты</p></a>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" />
+        <a href="./korzina.html"><p class="text-[12px]">Корзина</p></a>
+      </li>
+      <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
+        <img src="./images/avatar.png" alt="user" class="w-[25px] h-[25px] rounded-full mb-1" />
+        <a href=""><p class="text-[12px]">Профиль</p></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="pt-[100px] md:pt-[80px] pb-[80px] md:pb-0">
+  </main>
+
+
+  <footer class="w-full bg-[url('./images/footer.png')] bg-cover bg-center bg-no-repeat py-8 sm:py-12">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0">
+    <div class="flex items-center gap-2">
+      <a class="flex items-center gap-4" href="./index.html">
+      <img class="w-10 h-10" src="./images/logo.png" alt="logo">
+      <span class="text-lg font-bold text-gray-800">Северяночка</span>
+      </a>
+    </div>
+
+    <div class="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 text-gray-700 text-sm sm:text-base">
+      <a href="" class="hover:text-lime-500 transition-colors">О компании</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Контакты</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Вакансии</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Статьи</a>
+      <a href="" class="hover:text-lime-500 transition-colors">Политика обработки персональных данных</a>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+      <div class="flex gap-3">
+        <a href=""><img class="w-5 h-5" src="./images/instagram.png" alt="Instagram"></a>
+        <a href=""><img class="w-5 h-5" src="./images/vkontakte.png" alt="VK"></a>
+        <a href=""><img class="w-5 h-5" src="./images/facebook.png" alt="Facebook"></a>
+      </div>
+      <div class="text-gray-800 flex items-center gap-[10px] font-semibold">
+        <img src="./images/phone.png" alt="">
+        <p>8 800 777 33 33</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="container flex items-center justify-center sm:justify-end gap-[20px] pr-[100px] pb-[50px] mx-auto">
+    <p class="justify-center">Дизайн</p>
+    <a class="justify-center" href="">
+      <img class="w-[150px]" src="./images/Union.png" alt="">
+    </a>
+ </div>
+
+</footer>
+
+
+</body>
+</html>
+
+</body>
+</html>
