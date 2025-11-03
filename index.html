@@ -6,7 +6,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Северночка</title>
 </head>
-<body class="bg-gray-50">
+<body class="bg-orange-50">
 
   <div class="fixed top-0 w-full h-full bg-[rgba(255,255,255,0.5)] flex items-center justify-center" id="loading-screen">
     <img src="./assets/laoding/load.svg" alt="">
@@ -29,7 +29,7 @@
 
     <div class="relative w-[400px]">
       <input id="input" type="search" placeholder="Найти товар" class="w-full px-3 py-2 rounded-[10px] border border-lime-600 outline-none text-[14px] bg-gray-200 font-semibold"/>
-    <div id="search-cards" class="absolute max-h-[300px] overflow-y-scroll top-[40px] w-full bg-white border-2 border-lime-400 rounded-[10px] p-[10px] shadow-lg">
+    <div id="search-cards" class="absolute max-h-[300px] hidden overflow-y-scroll top-[40px] w-full bg-white border-2 border-lime-400 rounded-[10px] p-[10px] shadow-lg">
 
 
     </div>
@@ -46,8 +46,12 @@
           <a href=""><p class="text-[13px]">Продукты</p></a>
         </li>
         <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
-          <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" />
-          <a href="./korzina.html"><p class="text-[13px]">Корзина</p></a>
+          <a href="./korzina.html">
+          <div class="flex justify-center gap-[5px]">
+            <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" /><span id="badge" class="w-[15px] h-[15px] bg-[orange] flex items-center justify-center rounded-[50%]">0</span>
+          </div>
+          <p class="text-[13px]">Корзина</p>
+        </a>
         </li>
         <li class="flex items-center gap-2 cursor-pointer">
           <img src="./images/avatar.png" alt="user" class="w-[32px] h-[32px] rounded-full" />
@@ -67,7 +71,7 @@
     <div class="relative w-full max-w-[400px] mx-auto px-4">
   <input id="input-line" type="search" placeholder="Найти товар" class="w-full px-4 py-3 rounded-[10px] border border-lime-600 outline-none text-[16px] bg-gray-200 font-semibold placeholder:text-gray-600 focus:ring-2 focus:ring-lime-500 transition"/>
 
-  <div id="search-cards" class="absolute top-[55px] left-0 w-full bg-white border-2 border-lime-400 rounded-[10px] p-[10px] 
+  <div id="search-cards" class="absolute top-[55px] hidden left-0 w-full bg-white border-2 border-lime-400 rounded-[10px] p-[10px] 
     shadow-lg max-h-[300px] overflow-y-auto z-10">
   </div>
 </div>
@@ -89,8 +93,12 @@
         <a href=""><p class="text-[12px]">Продукты</p></a>
       </li>
       <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
-        <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" />
-        <a href="./korzina.html"><p class="text-[12px]">Корзина</p></a>
+      <a href="./korzina.html">
+        <div class="flex gap-[3px]">
+          <img src="./images/shopping-cart.png" alt="cart" class="w-[22px] h-[22px] mb-1" /><span id="bedgee" class="w-[14px] h-[14px] bg-[orange] flex items-center justify-center rounded-[50%]">0</span>
+        </div>
+          <p class="text-[12px]">Корзина</p>
+      </a>
       </li>
       <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
         <img src="./images/avatar.png" alt="user" class="w-[25px] h-[25px] rounded-full mb-1" />
@@ -102,7 +110,7 @@
   <main class="pt-[100px] md:pt-[80px] pb-[80px] md:pb-0">
   </main>
 
-  <div class="w-full h-[300px] bg-cover bg-center flex items-center justify-center text-center px-4 pt-[80px] md:pt-[40px]"
+  <div class="w-full h-[300px] bg-cover bg-center flex items-center justify-center text-center px-4 md:pt-[40px]"
      style="background-image: url('./images/Group 7100.png');">
   <div class="flex items-center justify-center gap-4 flex-wrap md:flex-nowrap">
     <img src="./images/img.png" alt="icon" class="hidden md:block">
@@ -126,6 +134,7 @@
   </div>
 
   <div id="aksiya" class="max-w-[1440px] pb-16 pb-[120px] px-4 sm:px-6 md:px-12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    
     </div>
  </div>
     </section>
@@ -284,7 +293,7 @@
     </section>
   </main>
 
-  <footer class="w-full bg-[url('./images/footer.png')] bg-cover bg-center bg-no-repeat py-8 sm:py-12">
+  <footer class="w-full bg-[url('/images/footer.png')] bg-cover bg-center bg-no-repeat pt-8 sm:py-12">
   <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0">
 
     <div class="flex items-center gap-2">
@@ -322,9 +331,10 @@
     </a>
  </div>
 
-</footer>
+` </footer>
 
 <script src="./products-data/products-data.js" ></script>
+<script src="./js/korzina.js"></script>
 <script src="./js/search.js"></script>
 <script src="./js/loading.js"></script>
 <script src="./js/main.js" ></script>

@@ -1,11 +1,5 @@
-let aksiya = document.getElementById("aksiya")
-let yangi = document.getElementById("novinki")
-let ommabop = document.getElementById("populyarnost")
-
-let aksiyaProducts = products.filter((el) => el.discount > 0);
-let aksiyaLastFourProducts = aksiyaProducts.slice(aksiyaProducts.length - 4 , aksiyaProducts.length);
-let novinkiFourProducts = products.slice(products.length - 4 , products.length )
-let populyarnostFourProducts =products.slice(7 , 11)
+let cartCards = document.getElementById("cart-Cards");
+let cartProducts = JSON.parse(localStorage.getItem("carts") || "[]");
 
 
 function showProducts(content, data){
@@ -113,11 +107,11 @@ function showProducts(content, data){
         </div>
         
         ${
-          carts.find((cart) => cart.id === el.id) ? 
+          cartProducts.find((cart) => cart.id === el.id) ? 
           `
           <div class="grid rounded-[10px] mt-[20px] border-[2px] border-lime-500 grid-cols-3">
             <button onClick="decrease(${el.id})" class="w-full p-[8px] font-bold flex items-center justify-center bg-lime-400 text-white">-</button>
-            <span class="w-full p-[8px] font-bold flex items-center justify-center bg-white text-black">${carts.find((cart) => cart.id === el.id).numbers}</span>
+            <span class="w-full p-[8px] font-bold flex items-center justify-center bg-white text-black">${cartProducts.find((cart) => cart.id === el.id).numbers}</span>
             <button onClick="increase(${el.id})" class="w-full p-[8px] font-bold flex items-center justify-center bg-lime-400 text-white">+</button>
           </div>
           ` : 
@@ -136,6 +130,6 @@ function showProducts(content, data){
     `
 })
 }
-showProducts(aksiya, aksiyaLastFourProducts)
-showProducts(yangi, novinkiFourProducts)
-showProducts(ommabop, populyarnostFourProducts)
+
+
+showProducts(cartCards, cartProducts);

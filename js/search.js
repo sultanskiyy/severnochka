@@ -6,7 +6,11 @@ let searchCards = document.getElementById("search-cards");
 function searchProducts(value) {
   let searchValue = value.trim().toLowerCase();
   searchCards.innerHTML = "";
-
+  if(searchValue){
+    searchCards.classList.remove("hidden");
+  }else{
+    searchCards.classList.add("hidden");
+  }
   if (searchValue === "") return;
 
   let searchedProducts = products.filter(el =>
@@ -40,4 +44,8 @@ if (inputline) {
   inputline.addEventListener("input", e => {
     searchProducts(e.target.value);
   });
+}else if(searchValue){
+  searchCards.classList.remove("hidden");
+}else{
+  searchCards.classList.add("hidden");
 }
