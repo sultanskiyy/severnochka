@@ -116,9 +116,9 @@ function showProducts(content, data){
           carts.find((cart) => cart.id === el.id) ? 
           `
           <div class="grid rounded-[10px] mt-[20px] border-[2px] border-lime-500 grid-cols-3">
-            <button onClick="decrease(${el.id})" class="w-full p-[8px] font-bold flex items-center justify-center bg-lime-400 text-white">-</button>
+            <button onClick="decrease(${el.id})" class="w-full p-[8px] rounded-[7px] font-bold flex items-center justify-center bg-lime-400 text-white">-</button>
             <span class="w-full p-[8px] font-bold flex items-center justify-center bg-white text-black">${carts.find((cart) => cart.id === el.id).numbers}</span>
-            <button onClick="increase(${el.id})" class="w-full p-[8px] font-bold flex items-center justify-center bg-lime-400 text-white">+</button>
+            <button onClick="increase(${el.id})" class="w-full p-[8px] rounded-[7px] font-bold flex items-center justify-center bg-lime-400 text-white">+</button>
           </div>
           ` : 
           `
