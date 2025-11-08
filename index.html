@@ -44,8 +44,11 @@
 
       <ul class="hidden md:flex items-center gap-6">
         <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
-          <img src="./images/like.png" alt="like" class="w-[22px] h-[22px] mb-1" />
           <a href="">
+            <div class="flex justify-center gap-[5px]">
+              <img src="./images/like.png" alt="cart" class="w-[22px] h-[22px] mb-1" /><span id="like-badge"
+                class="w-[15px] h-[15px] bg-[orange] flex items-center justify-center rounded-[50%]">0</span>
+            </div>
             <p class="text-[13px]">Избранное</p>
           </a>
         </li>
@@ -64,12 +67,9 @@
             <p class="text-[13px]">Корзина</p>
           </a>
         </li>
-        <li class="flex items-center gap-2 cursor-pointer">
-          <img src="./images/avatar.png" alt="user" class="w-[32px] h-[32px] rounded-full" />
-          <a href="">
-            <p class="font-medium text-[14px]">Алексей</p>
-          </a>
-          <img src="./images/Button.png" alt="arrow" />
+        <li id="profile" class="flex items-center gap-[10px] cursor-pointer">
+          <img id="profile-img" src="./images/avatar.png" alt="user" class="w-[32px] h-[32px] rounded-full" />
+          <p id="profile-name" class="font-medium text-[14px]">Алексей</p>
         </li>
       </ul>
     </div>
@@ -102,8 +102,11 @@
         </a>
       </li>
       <li class="flex flex-col items-center text-gray-700 hover:text-lime-600">
-        <img src="./images/like.png" alt="like" class="w-[22px] h-[22px] mb-1" />
         <a href="">
+          <div class="flex gap-[3px]">
+            <img src="./images/like.png" alt="cart" class="w-[22px] h-[22px] mb-1" /><span id="badge-like"
+              class="w-[14px] h-[14px] bg-[orange] flex items-center justify-center rounded-[50%]">0</span>
+          </div>
           <p class="text-[12px]">Избранное</p>
         </a>
       </li>
@@ -131,18 +134,19 @@
     </ul>
   </nav>
 
-  <main class="pt-[100px] md:pt-[80px] pb-[80px] md:pb-0">
+  <main class="pt-[100px] md:pt-[80px] pb-[80px] items-center justify-center md:pb-0">
+    <div class="w-full h-[300px] bg-cover bg-center flex items-center justify-center text-center px-4 md:pt-[40px]"
+      style="background-image: url('./images/Group 7100.png');">
+      <div class="flex items-center justify-center gap-4 flex-wrap md:flex-nowrap">
+        <img src="./images/img.png" alt="icon" class="hidden md:block">
+        <p class="text-[23px] md:text-[56px] font-bold text-black">
+          Доставка бесплатно от 1000 ₽
+        </p>
+      </div>
+    </div>
   </main>
 
-  <div class="w-full h-[300px] bg-cover bg-center flex items-center justify-center text-center px-4 md:pt-[40px]"
-    style="background-image: url('./images/Group 7100.png');">
-    <div class="flex items-center justify-center gap-4 flex-wrap md:flex-nowrap">
-      <img src="./images/img.png" alt="icon" class="hidden md:block">
-      <p class="text-[23px] md:text-[56px] font-bold text-black">
-        Доставка бесплатно от 1000 ₽
-      </p>
-    </div>
-  </div>
+
 
   <main class="w-full bg-orange-50">
     <section>
@@ -341,6 +345,23 @@
         </div>
     </section>
 
+    <section>
+      <div id="outer-modal" class="fixed hidden top-0 x-3 bg-[orangered]/20 w-full h-full flex items-center justify-center">
+        <form id="form-modal" class="max-w-[500px] w-full p-[60px] flex flex-col gap-[30px] bg-white rounded-[20px]">
+          <input class="py-[10px] border-[orangered]/70 outline-none border-[2px] px-[15px] rounded-[10px]" type="text"
+            placeholder="Your photo">
+          <input class="py-[10px] border-[orangered]/70 outline-none border-[2px] px-[15px] rounded-[10px]" type="text"
+            placeholder="Your name">
+          <input class="py-[10px] border-[orangered]/70 outline-none border-[2px] px-[15px] rounded-[10px]" type="tel"
+            placeholder="+998(__)___-__-__">
+          <input class="py-[10px] border-[orangered]/70 outline-none border-[2px] px-[15px] rounded-[10px]"
+            type="password" placeholder="Your password">
+          <button class="py-[10px] bg-[orangered]/25 text-[orangered] px-[15px] rounded-[10px]"
+            type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
     </div>
     </section>
   </main>
@@ -392,6 +413,8 @@
   <script src="./js/search.js"></script>
   <script src="./js/loading.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/like.js"></script>
+  <script src="./js/profile.js"></script>
 </body>
 
 </html>

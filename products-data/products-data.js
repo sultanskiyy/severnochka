@@ -163,7 +163,7 @@ const products = [
     name: "Fish",
     category: "Meat",
     description:
-      "A type of seafood, known for its omega-3 fatty acids and high protein content.",
+      "Fish is a delicious and nutritious meal, rich in protein and vitamins. It’s great for health,<br>skin, and brain development.",
     price: 89,
     rating: 3.5,
     discount: 50,
@@ -483,7 +483,7 @@ const products = [
     name: "Grilled Cheese",
     category: "Lunch",
     description:
-      "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
+      "A grilled cheese sandwich is crispy outside, gooey inside, and perfectly melted with delicious buttery flavor.",
     price: 100,
     rating: 5,
     discount: 50,
@@ -531,7 +531,7 @@ const products = [
     name: "Chicken Alfredo",
     category: "Dinner",
     description:
-      "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
+      "Chicken Alfredo pasta was my favorite “fancy” restaurant order as a kid — luxe <br> sauce clinging to fettuccine topped with crispy chicken.",
     price: 94,
     rating: 4,
     discount: 20,

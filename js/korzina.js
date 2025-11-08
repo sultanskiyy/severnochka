@@ -1,6 +1,15 @@
 let carts = JSON.parse(localStorage.getItem("carts") || "[]");
+let like = JSON.parse(localStorage.getItem("like") || "[]");
+
+
 
 localStorage.setItem("carts", JSON.stringify(carts));
+localStorage.setItem("like", JSON.stringify(like));
+
+
+
+
+
 
 let badge = document.getElementById("badge");
 let badgee = document.getElementById("bedgee");
@@ -20,7 +29,6 @@ function addToCart(id) {
     showProducts(aksiya, aksiyaLastFourProducts);
     showProducts(yangi, novinkiFourProducts);
     showProducts(ommabop, populyarnostFourProducts);
-    showProducts(cartCards, cartProducts);
 }
 
 function increase(id) {
@@ -31,12 +39,14 @@ function increase(id) {
         return el;
     });
 
+    badge.textContent = carts.length;
+    badgee.textContent = carts.length;
+
     localStorage.setItem("carts", JSON.stringify(carts));
 
     showProducts(aksiya, aksiyaLastFourProducts);
     showProducts(yangi, novinkiFourProducts);
     showProducts(ommabop, populyarnostFourProducts);
-    showProducts(cartCards, cartProducts);
 }
 
 function decrease(id) {
@@ -61,6 +71,7 @@ function decrease(id) {
     showProducts(aksiya, aksiyaLastFourProducts);
     showProducts(yangi, novinkiFourProducts);
     showProducts(ommabop, populyarnostFourProducts);
-    showProducts(cartCards, cartProducts);
 }
+localStorage.setItem("carts", JSON.stringify(carts));
+
 

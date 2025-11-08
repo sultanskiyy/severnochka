@@ -3,20 +3,30 @@ let yangi = document.getElementById("novinki")
 let ommabop = document.getElementById("populyarnost")
 
 let aksiyaProducts = products.filter((el) => el.discount > 0);
-let aksiyaLastFourProducts = aksiyaProducts.slice(aksiyaProducts.length - 4 , aksiyaProducts.length);
-let novinkiFourProducts = products.slice(products.length - 4 , products.length )
-let populyarnostFourProducts =products.slice(7 , 11)
+let aksiyaLastFourProducts = aksiyaProducts.slice(aksiyaProducts.length - 4, aksiyaProducts.length);
+let novinkiFourProducts = products.slice(products.length - 4, products.length)
+let populyarnostFourProducts = products.slice(7, 11)
 
 
-function showProducts(content, data){
-    content.innerHTML = "";
-    data.map((el) => {
+function showProducts(content, data) {
+  content.innerHTML = ""; 
+  data.map((el) => {
     content.innerHTML += `
-    <div class="bg-gray-50 p-3 sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+    <div class="bg-gray-50 p-3 relative sm:p-4 hover:shadow-[0_0_20px_4px_rgba(255,165,0,0.7)]  duration-1000 rounded-[6px] flex flex-col">
+    ${like.find((item) => item.id === el.id) ? `
+      <img
+      onClick="removeToLike(${el.id})"
+      id="like" class="w-[30px] h-[30px] top-[28px] cursor-pointer bg-[gray] right-[16px] absolute" src="../assets/images/like/m-like.svg" alt="">` : `
+      <img
+      onClick="addToLike(${el.id})"
+      id="like" class="w-[30px] h-[30px] top-[28px] cursor-pointer bg-[gray] right-[16px] absolute" src="../assets/images/like/p-like.svg" alt="">
+      `
+      }
+      
       <img class="h-[200px] object-cover py-2 sm:py-3" src=${el.images[0]} alt="">
       <h3 class="text-base sm:text-[18px] mb-[10px] font-semibold line-clamp-2">${el.name}</h3>
       <div class="flex justify-between py-1 sm:py-2">
-        <p class="text-lg sm:text-[22px] font-bold">${el.price -el.price * el.discount /100} ₽</p>
+        <p class="text-lg sm:text-[22px] font-bold">${el.price - el.price * el.discount / 100} ₽</p>
         <p class="text-lg sm:text-[22px]">${el.price} ₽</p>
       </div>
       <div class="flex justify-between text-sm sm:text-[14px]">
@@ -27,8 +37,7 @@ function showProducts(content, data){
         <p class="line-clamp-2 mb-[16px] text-base sm:text-[18px]">${el.description}</p>
         
         <div class="py-2 sm:py-3 flex flex-col">
-        ${
-            el.rating === 5 ? `
+        ${el.rating === 5 ? `
         <div class="flex gap-[5px]">
           <img src="./assets/yulduzlar/yulduz.svg" alt="">
           <img src="./assets/yulduzlar/yulduz.svg" alt="">
@@ -109,32 +118,31 @@ function showProducts(content, data){
           <img src="./assets/yulduzlar/bosh-yulduz.svg" alt="">
         </div>
         `: ""
-        }
+      }
         </div>
         
-        ${
-          carts.find((cart) => cart.id === el.id) ? 
-          `
+        ${carts.find((cart) => cart.id === el.id) ?
+        `
           <div class="grid rounded-[10px] mt-[20px] border-[2px] border-lime-500 grid-cols-3">
             <button onClick="decrease(${el.id})" class="w-full p-[8px] rounded-[7px] font-bold flex items-center justify-center bg-lime-400 text-white">-</button>
             <span class="w-full p-[8px] font-bold flex items-center justify-center bg-white text-black">${carts.find((cart) => cart.id === el.id).numbers}</span>
             <button onClick="increase(${el.id})" class="w-full p-[8px] rounded-[7px] font-bold flex items-center justify-center bg-lime-400 text-white">+</button>
           </div>
-          ` : 
-          `
+          ` :
+        `
           <div>
             <button onClick="addToCart(${el.id})" class="border-2 border-lime-500 hover:border-orange-400 hover:bg-orange-400 hover:text-white duration-1000 text-lime-600 flex py-1 sm:py-2 px-3 sm:px-4 rounded-[6px] w-full justify-center mt-4">
             В корзину
             </button>
           </div>
           `
-        }
+      }
 
         
       </div>
     </div>
     `
-})
+  })
 }
 showProducts(aksiya, aksiyaLastFourProducts)
 showProducts(yangi, novinkiFourProducts)
